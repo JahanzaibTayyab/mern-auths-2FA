@@ -1,18 +1,19 @@
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogDescription,
   DialogFooter,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
-import { toast } from "@/hooks/use-toast";
-import { logoutMutationFn } from "@/lib/api";
-import { useMutation } from "@tanstack/react-query";
-import { Loader } from "lucide-react";
-import { useRouter } from "next/navigation";
 import React, { useCallback } from "react";
+
+import { Button } from "@/components/ui/button";
+import { Loader } from "lucide-react";
+import { logoutMutationFn } from "@/lib/api";
+import { toast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
 
 const LogoutDialog = (props: {
   isOpen: boolean;
@@ -37,6 +38,7 @@ const LogoutDialog = (props: {
 
   const handleLogout = useCallback(() => {
     mutate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

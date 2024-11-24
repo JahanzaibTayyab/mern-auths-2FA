@@ -83,7 +83,7 @@ export default function SignUp() {
             <Logo />
 
             <h1 className="text-xl tracking-[-0.16px] dark:text-[#fcfdffef] font-bold mb-1.5 mt-8 text-center sm:text-left">
-              Create a Squeezy account
+              Create a SecureView account
             </h1>
             <p className="mb-6 text-center sm:text-left text-base dark:text-[#f1f7feb5] font-normal">
               Already have an account?{" "}

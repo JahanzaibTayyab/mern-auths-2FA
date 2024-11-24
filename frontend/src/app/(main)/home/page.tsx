@@ -1,5 +1,5 @@
-import React from "react";
 import EnableMfa from "../_components/EnableMfa";
+import React from "react";
 import Sessions from "../_components/Sessions";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
           Setup security and sessions
         </h1>
         <p className="text-sm text-[#0007149f] dark:text-gray-100 font-normal">
-          Follow the steps to activate using the Squeezy.
+          Follow the steps to activate using the SecureView.
         </p>
       </div>
       <div className="relative max-w-3xl py-0 mx-auto w-full px-6 md:max-w-5xl">

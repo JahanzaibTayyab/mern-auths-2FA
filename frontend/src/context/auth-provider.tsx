@@ -17,7 +17,7 @@ type UserType = {
 
 type AuthContextType = {
   user?: UserType;
-  error: any;
+  error: unknown;
   isLoading: boolean;
   isFetching: boolean;
   refetch: () => void;

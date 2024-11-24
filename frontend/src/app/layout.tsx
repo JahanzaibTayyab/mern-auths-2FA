@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+
+import { DM_Sans } from "next/font/google";
+import type { Metadata } from "next";
+import QueryProvider from "@/context/query-provider";
+import { ThemeProvider } from "@/context/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import localFont from "next/font/local";
+
+const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +33,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-background ${dm_sans.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );
